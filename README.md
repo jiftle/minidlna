@@ -2,6 +2,7 @@
 
 #### 项目介绍
 minidlna 1.2.1的克隆版本，添加rmvb格式支持。
+参考https://blog.csdn.net/JOYIST/article/details/79191765
 
 #### 软件架构
 软件架构说明

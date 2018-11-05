@@ -401,6 +401,9 @@ is_video(const char * file)
 		ends_with(file, ".m2t") || ends_with(file, ".mkv")   ||
 		ends_with(file, ".vob") || ends_with(file, ".ts")    ||
 		ends_with(file, ".flv") || ends_with(file, ".xvid")  ||
+        //-------- add rmvb format support ---------- satrt
+		ends_with(file, ".rm")  || ends_with(file, ".rmvb")  ||
+        //-------- add rmvb format support ---------- end
 #ifdef TIVO_SUPPORT
 		ends_with(file, ".TiVo") ||
 #endif

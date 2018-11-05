@@ -1538,6 +1538,12 @@ video_no_dlna:
 			xasprintf(&m.mime, "video/x-matroska");
 		else if( strcmp(ctx->iformat->name, "flv") == 0 )
 			xasprintf(&m.mime, "video/x-flv");
+        //-- add rmvb format video support -- start
+		else if( strcmp(ctx->iformat->name, "rm") == 0 )
+			xasprintf(&m.mime, "video/x-pn-realvideo");
+		else if( strcmp(ctx->iformat->name, "rmvb") == 0 )
+			xasprintf(&m.mime, "video/x-pn-realvideo");
+        //-- add rmvb format video support -- end
 		else
 			DPRINTF(E_WARN, L_METADATA, "%s: Unhandled format: %s\n", path, ctx->iformat->name);
 	}
