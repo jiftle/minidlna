@@ -1,0 +1,5 @@
+tivo_commands.o: tivo_commands.c /usr/include/stdc-predef.h config.h
+
+/usr/include/stdc-predef.h:
+
+config.h:

@@ -1,38 +1,34 @@
 # minidlna
 
-#### 项目介绍
+#### Intridute
 minidlna 1.2.1的克隆版本，添加rmvb格式支持。
 参考https://blog.csdn.net/JOYIST/article/details/79191765
 
-#### 软件架构
-软件架构说明
 
+#### How to do
 
-#### 安装教程
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+```
+# ---------------------------
+# install require library
+# ---------------------------
+sudo apt-get install build-essential libexif-dev libjpeg-dev libid3tag0-dev libflac-dev libvorbis-dev libsqlite3-dev libavformat-dev autoconf automake  
+  
+# ---------------------------
+# complie install
+# ---------------------------
+./autogen.sh  
+./configure  
+make  
+make install  
+sudo cp ./linux/minidlna.inot.d.script.tmpl  /etc/init.d/minidlna  
+sudo cp ./minidlna.conf  /etc/minidlna.conf  
+  
+# debug model run app 第一次启动使用-d –v选项看有没有出错  
+sudo /usr/local/sbin/minidlnad -d -v  
+# 没出错就ctrl+c 结束进程  
+  
+# normal model run as service 正常启动  
+sudo service minidlna start  
+# refresh server 刷新列表  
+sudo service minidlna restart 
+```

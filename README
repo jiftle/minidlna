@@ -24,7 +24,7 @@ Prerequisites
 - libexif
 - libjpeg
 - libid3tag
-- libFLAC
+- libflac
 - libvorbis
 - libsqlite3
 - libavformat (the ffmpeg libraries)

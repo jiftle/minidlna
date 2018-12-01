@@ -1,0 +1,5 @@
+tivo_beacon.o: tivo_beacon.c /usr/include/stdc-predef.h config.h
+
+/usr/include/stdc-predef.h:
+
+config.h:
